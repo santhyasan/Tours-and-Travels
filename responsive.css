@@ -382,6 +382,9 @@
     .static-icons p{
         font-size: 20px;
     }
+    #static-counter::after{
+    height: 30%;
+}
 }
 
 
