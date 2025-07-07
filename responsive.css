@@ -375,6 +375,25 @@
 .static-wrapper{
         grid-template-columns:repeat(2,1fr);
 }
+
+@media screen and (max-width:768px) {
+     #static-counter::after{
+    height: 30%;
+}
+}
+
+@media screen and (max-width:426px) {
+     #static-counter::after{
+    height: 30%;
+}
+}
+
+@media screen and (max-width:376px) {
+     #static-counter::after{
+    height: 30%;
+}
+}
+
 @media screen and (max-width:320px) {
      .static-icons i{
         font-size: 30px;
