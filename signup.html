@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | Travelo</title>
+
+  <!-- Font Awesome for form icons (optional, but nice) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- ═══════════════  INTERNAL  CSS  ════════════════ -->
+  <style>
+    /* ─── base reset ──────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 30% 20%, #007adf 0%, #008ffb 35%, #0067d9 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    /* ─── card container ───────────────────────────── */
+    .card {
+      background: #fff;
+      width: 100%;
+      max-width: 420px;
+      padding: 2.5rem 2rem 2rem;
+      border-radius: 14px;
+      box-shadow: 0 12px 28px rgba(0,0,0,.15);
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+    .card h2 {
+      text-align: center;
+      color: #222;
+      margin-bottom: .5rem;
+    }
+
+    /* ─── input groups ─────────────────────────────── */
+    label {
+      position: relative;
+      display: block;
+    }
+    label i {
+      position: absolute;
+      top: 50%;
+      left: .85rem;
+      transform: translateY(-50%);
+      color: #888;
+      font-size: .9rem;
+    }
+    label input {
+      width: 100%;
+      padding: .75rem 1rem .75rem 2.45rem;
+      border: 1px solid #bbb;
+      border-radius: 6px;
+      font-size: .94rem;
+      transition: border .25s;
+    }
+    label input:focus {
+      border-color: #007adf;
+      outline: none;
+    }
+
+    /* ─── checkbox row ─────────────────────────────── */
+    .terms {
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+      font-size: .85rem;
+    }
+    .terms a { color: #007adf; text-decoration: none; }
+
+    /* ─── submit button ────────────────────────────── */
+    button {
+      width: 100%;
+      padding: .8rem;
+      background: #007adf;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background .25s;
+      font-size: 1rem;
+    }
+    button:hover { background: #0064ba; }
+
+    /* ─── alt link below button ────────────────────── */
+    .alt {
+      text-align: center;
+      font-size: .85rem;
+    }
+    .alt a { color: #007adf; text-decoration: none; }
+
+    /* ─── small‑screen tweak ───────────────────────── */
+    @media (max-width: 460px) {
+      .card { padding: 2rem 1.25rem 1.5rem; }
+    }
+  </style>
+  <!-- ════════════════════════════════════════════════ -->
+</head>
+
+<body>
+  <form class="card" action="#" autocomplete="off">
+    <h2>Create Your Account</h2>
+
+    <label>
+      <i class="fa-solid fa-user"></i>
+      <input type="text" name="name" placeholder="Full Name" required>
+    </label>
+
+    <label>
+      <i class="fa-solid fa-envelope"></i>
+      <input type="email" name="email" placeholder="Email" required>
+    </label>
+
+    <label>
+      <i class="fa-solid fa-phone"></i>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+    </label>
+
+    <label>
+      <i class="fa-solid fa-lock"></i>
+      <input type="password" name="password" placeholder="Password" minlength="6" required>
+    </label>
+
+    <label>
+      <i class="fa-solid fa-lock"></i>
+      <input type="password" name="confirm" placeholder="Confirm Password" minlength="6" required>
+    </label>
+
+    <button type="submit">Sign Up</button>
+
+    <p class="alt">
+      Already a member?
+      <a href="login.html">Login here</a>
+    </p>
+  </form>
+
+  <script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent actual form submission
+    // simulate success, then redirect
+    window.location.href = "index.html";
+  });
+</script>
+
+</body>
+</html>
+

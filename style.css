@@ -110,11 +110,13 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 50px;
 }
 
 nav ul{
     list-style-type: none;
     display: flex;
+    margin-right: 120px;
 }
 
 nav ul li{
@@ -124,6 +126,7 @@ nav ul li{
 nav ul li a{
     color: var(--white-color);
     font-size: 1.1rem;
+    
 }
 
 nav ul li a:hover{
@@ -137,6 +140,28 @@ nav ul li a.active {
   color: #FFD700; 
   border-bottom: 2px solid #FFD700;
 }
+
+.auth-buttons {
+    display: flex;
+    /* gap: 10px; */
+    align-items: center;
+    /* margin-left: auto; */
+}
+
+.auth-buttons a {
+    padding: 1px 10px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: white;
+}
+
+
+.auth-buttons .signup-btn:hover {
+    background-color: #ffd90093;
+    color: #333;
+}
+
 
 .btn{
     font-size: 1.3rem;
@@ -302,6 +327,7 @@ form{
 .heading-normal-text{
     color:#2095ae; 
     letter-spacing: 5px;
+    margin-top: 40px;
 }
 .about-container-wrapper ul p{
     margin-left: 1rem;
@@ -311,6 +337,7 @@ form{
     color: #000;
     font-size: 40px;
     letter-spacing: 5px;
+    margin-top: 10px;
 }
 
 .agency-left-side span{
@@ -318,6 +345,7 @@ form{
 }
 
 .agency-right-side .img{
+    margin-top: 40px;
     position: relative;
 }
 

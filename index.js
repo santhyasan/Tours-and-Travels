@@ -46,22 +46,3 @@ countersEl.forEach((counters)=>{
         }
     }
 })
-
-
-const form = document.getElementById("contactForm");
-const successMsg = document.getElementById("successMessage");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  // Show success message
-  successMsg.style.display = "block";
-
-  // Clear form
-  form.reset();
-
-  // Auto-hide message after 3 seconds
-  setTimeout(() => {
-    successMsg.style.display = "none";
-  }, 3000);
-});

@@ -35,11 +35,32 @@ const tourData = [
     image: "assects/bali.png"
   },
   {
-    title: "4-Day Dubai Desert Safari",
+    title: "4-Day Family Tour in New Delhi",
     price: 1000,
     days: 4,
     type: "family",
-    image: "assects/dubai desert.jpg"
+    image: "assects/Taj-Mahal-1024-X-1024.webp"
+  },
+  {
+    title: "3-Day Family Tour of Singapore",
+    price: 1800,
+    days: 3,
+    type: "family",
+    image:"assects/singapore.jpeg"
+  },
+  {
+    title: "3-Day Adventure in Ladakh",
+    price: 1050,
+    days: 3,
+    type: "adventure",
+    image: "assects/ladhakh.jpg"
+  },
+  {
+    title: "3-Days in Switzerland",
+    price: 950,
+    days: 3,
+    type: "honeymoon",
+    image: "assects/swizz.jpg"
   }
 ];
 

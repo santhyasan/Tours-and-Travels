@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In | Travelo</title>
+
+  <!-- Font Awesome for icons (optional) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- ══════════════ INTERNAL CSS ══════════════ -->
+  <style>
+    /* simple reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at 30% 20%, #007adf 0%, #008ffb 35%, #0067d9 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    /* card */
+    .card {
+      background: #fff;
+      width: 100%;
+      max-width: 380px;
+      padding: 2.3rem 2rem 1.8rem;
+      border-radius: 14px;
+      box-shadow: 0 12px 28px rgba(0,0,0,.15);
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    h2 { text-align: center; color: #222; }
+
+    /* inputs */
+    label { position: relative; display: block; }
+    label i {
+      position: absolute;
+      top: 50%; left: .85rem; transform: translateY(-50%);
+      color: #888; font-size: .9rem;
+    }
+    label input {
+      width: 100%; padding: .75rem 1rem .75rem 2.45rem;
+      border: 1px solid #bbb; border-radius: 6px;
+      font-size: .94rem; transition: border .25s;
+    }
+    label input:focus { border-color: #007adf; outline: none; }
+
+    /* remember / forgot row */
+    .row {
+      display: flex; justify-content: space-between;
+      align-items: center; font-size: .85rem;
+    }
+    .row a { color: #007adf; text-decoration: none; }
+
+    /* button */
+    button {
+      width: 100%; padding: .8rem;
+      background: #007adf; color: #fff;
+      border: none; border-radius: 6px;
+      font-weight: 600; cursor: pointer;
+      transition: background .25s;
+      font-size: 1rem;
+    }
+    button:hover { background: #0064ba; }
+
+    /* alternate link */
+    .alt { text-align: center; font-size: .85rem; }
+    .alt a { color: #007adf; text-decoration: none; }
+
+    /* small screen tweak */
+    @media (max-width: 430px){
+      .card { padding: 2rem 1.3rem 1.6rem; }
+    }
+  </style>
+  <!-- ══════════════════════════════════════════ -->
+</head>
+
+<body>
+  <form class="card" action="#" autocomplete="off">
+    <h2>Welcome Back</h2>
+
+    <label>
+      <i class="fa-solid fa-envelope"></i>
+      <input type="email" name="email" placeholder="Email" required>
+    </label>
+
+    <label>
+      <i class="fa-solid fa-lock"></i>
+      <input type="password" name="password" placeholder="Password" minlength="6" required>
+    </label>
+
+    <div class="row">
+      <label>
+        <input type="checkbox"> Remember me
+      </label>
+      <a href="#">Forgot&nbsp;Password?</a>
+    </div>
+
+    <button type="submit">Sign In</button>
+
+    <p class="alt">
+      New here?
+      <a href="signup.html">Create an account</a>
+    </p>
+  </form>
+
+  <script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault(); 
+    window.location.href = "index.html";
+  });
+</script>
+
+</body>
+</html>
