@@ -130,7 +130,7 @@
 
     nav ul li{
         display: block;
-        margin: 15px;
+        margin: 10px;
     }
 
     nav ul li :hover{
@@ -242,6 +242,14 @@
     .form-control{
         width: 120%;
     }
+    .container{
+    position: relative;
+}
+    .auth-buttons {
+        margin:0px;
+        position: absolute;
+        z-index: 2;
+}
 
 }
 
@@ -250,7 +258,6 @@
         width: 100%;
     }
 .container{
-    
     position: relative;
 }
     .auth-buttons {
@@ -369,9 +376,14 @@
 }
 
 @media screen and (max-width:426px) {
+    
     #choose-place{
         padding:  10px;
         margin: 10px;
+    }
+
+     #choose-place .container{
+        margin-top: 40px;
     }
     .headings{
         font-size: 35px;
