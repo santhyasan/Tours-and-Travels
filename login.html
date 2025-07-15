@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sign In | Travelo</title>
 
-  <!-- Font Awesome for icons (optional) -->
   <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
 
-  <!-- ══════════════ INTERNAL CSS ══════════════ -->
   <style>
-    /* simple reset */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after{
+       box-sizing: border-box;
+        margin: 0; 
+        padding: 0; 
+      }
 
     body {
       font-family: "Segoe UI", Arial, sans-serif;
@@ -37,51 +38,88 @@
       gap: 1.1rem;
     }
 
-    h2 { text-align: center; color: #222; }
+    h2{
+      text-align: center;
+      color: #222; 
+    }
 
     /* inputs */
-    label { position: relative; display: block; }
+    label {
+      position: relative; 
+      display: block;
+     }
     label i {
       position: absolute;
-      top: 50%; left: .85rem; transform: translateY(-50%);
-      color: #888; font-size: .9rem;
+      top: 50%; 
+      left: .85rem; 
+      transform: translateY(-50%);
+      color: #888; 
+      font-size: .9rem;
     }
     label input {
-      width: 100%; padding: .75rem 1rem .75rem 2.45rem;
-      border: 1px solid #bbb; border-radius: 6px;
-      font-size: .94rem; transition: border .25s;
+      width: 100%; 
+      padding: .75rem 1rem .75rem 2.45rem;
+      border: 1px solid #bbb; 
+      border-radius: 6px;
+      font-size: .94rem; 
+      transition: border .25s;
     }
-    label input:focus { border-color: #007adf; outline: none; }
+    label input:focus {
+      border-color: #007adf;
+      outline: none; }
 
     /* remember / forgot row */
     .row {
-      display: flex; justify-content: space-between;
-      align-items: center; font-size: .85rem;
+      display: flex;
+      justify-content: space-between;   
+      align-items: center;              
+      margin: .75rem 0 1.25rem;         
     }
-    .row a { color: #007adf; text-decoration: none; }
+   .remember {
+      display: flex;
+      align-items: center;
+    }
+
+    input[type="checkbox"] {
+        accent-color: #0077ff74;           
+        cursor: pointer;
+    }
 
     /* button */
     button {
-      width: 100%; padding: .8rem;
-      background: #007adf; color: #fff;
-      border: none; border-radius: 6px;
-      font-weight: 600; cursor: pointer;
-      transition: background .25s;
+      width: 100%;
+      padding: .8rem;
+      background: #007adf;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: .25s;
       font-size: 1rem;
     }
-    button:hover { background: #0064ba; }
+    button:hover {
+       background: #0064ba;
+      }
 
     /* alternate link */
-    .alt { text-align: center; font-size: .85rem; }
-    .alt a { color: #007adf; text-decoration: none; }
+    .alt { 
+      text-align: center;
+      font-size: .85rem;
+    }
+    .alt a { 
+      color: #007adf; 
+      text-decoration: none;
+     }
 
     /* small screen tweak */
     @media (max-width: 430px){
-      .card { padding: 2rem 1.3rem 1.6rem; }
+      .card {
+        padding: 2rem 1.3rem 1.6rem; 
+      }
     }
   </style>
-  <!-- ══════════════════════════════════════════ -->
-</head>
+ </head>
 
 <body>
   <form class="card" action="#" autocomplete="off">
@@ -97,14 +135,19 @@
       <input type="password" name="password" placeholder="Password" minlength="6" required>
     </label>
 
-    <div class="row">
-      <label>
-        <input type="checkbox"> Remember me
-      </label>
-      <a href="#">Forgot&nbsp;Password?</a>
-    </div>
+   <div class="row">
+  <!-- left‑hand side -->
+  <label class="remember">
+    <input type="checkbox" id="remember" name="remember">
+    Remember me
+  </label>
 
-    <button type="submit">Sign In</button>
+  <!-- right‑hand side -->
+  <a href="#" class="forgot">Forgot&nbsp;Password?</a>
+</div>
+
+
+    <button type="submit">Sign In</button>
 
     <p class="alt">
       New here?
@@ -113,10 +156,22 @@
   </form>
 
   <script>
+
   document.querySelector("form").addEventListener("submit", function(e) {
     e.preventDefault(); 
     window.location.href = "index.html";
   });
+
+
+
+  document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();              
+  localStorage.setItem("loggedIn", "true");
+
+  window.location.href = "search.html";
+});
+
+  
 </script>
 
 </body>

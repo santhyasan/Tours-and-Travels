@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tours and Travels</title>
+    <link rel="icons" href="./assects/icon.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -27,13 +28,23 @@
                 <li><a href="#choose-place">Tours</a></li>
                 <li><a href="#top-destination">Destination</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="search.html">Explore Tours</a></li>
+                <li id="exploreLink"><a href="search.html">Explore Tours</a></li>
             </ul>
 
-            <div class="auth-buttons">
-                <!-- <a href="login.html" class="login-btn">Sign In</a> -->
-                <a href="signup.html" class="signup-btn">Sign Up/ Sign In</a>
+            <div class="auth-buttons-desktop">
+                <a href="signup.html" class="signup-btn" >Sign Up / Sign In</a>
+                <button id="logoutBtn">Logout</button>
             </div>
+            
+            <div class="auth-buttons-mobile">
+                <button class="btn" onclick="window.location='login.html'" title="Sign In">
+                    <i class="fas fa-user" style="color:wheat; font-size: large;background-color: rgba(218, 165, 32, 0.816);border-radius: 50%; padding: 5px; "></i>
+                </button>
+                <button class="btn logout" onclick="logout()" title="Logout">
+                    <i class="fas fa-sign-out-alt" style="color: wheat; font-size: large; background-color: rgba(218, 165, 32, 0.816); border-radius: 50%; padding: 5px; "></i>
+                </button>
+            </div>
+
             <div class="btn">
                 <i class="fas fa-bars menu-btn"></i>
             </div>
@@ -344,6 +355,12 @@
 
     </div>
   </section>
+
+  <div id="welcomePopup" class="popup">
+  <p> You're signed in! <br> Click "Explore Tours" to discover our packages.</p>
+  <span class="close-btn" onclick="hideWelcomePopup()">×</span>
+</div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./swiper.js"></script>
     <script src="./index.js"></script>

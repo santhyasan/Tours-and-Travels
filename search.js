@@ -112,23 +112,11 @@ function closeModal() {
 }
 
 
+// search.js   (run as soon as possible)
+if (!localStorage.getItem("loggedIn")) {
+  // not signed in – kick them out
+  window.location.replace("login.html");   // or "signup.html"
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("bookingForm");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    closeModal();
-
-    const popup = document.getElementById("successPopup");
-    popup.style.display = "block";
-
-    setTimeout(() => {
-      popup.style.display = "none";
-    }, 3000);
-
-    form.reset();
-  });
-});
 

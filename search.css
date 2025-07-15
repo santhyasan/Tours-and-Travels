@@ -21,6 +21,7 @@ header nav a {
   text-decoration: none;
   font-weight: 500;
 }
+
 main {
   display: flex;
   padding: 2rem;
@@ -163,4 +164,6 @@ main {
     transform: translate(-50%, 0);
   }
 }
+
+
 

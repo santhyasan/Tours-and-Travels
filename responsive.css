@@ -89,7 +89,19 @@
     .container{
        padding: 0 30px; 
     }
-
+    .auth-buttons-desktop{
+        display: none;
+    }
+    .auth-buttons-mobile{
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        color: black;
+        font-size: medium;
+        position: fixed;
+        top: 10px;
+        right: 50px;
+    }
     .btn{
         display: block;
     }
@@ -108,6 +120,9 @@
         margin: 0%;
         margin-top: 10px;
         margin-right: 100%;
+    }
+    .search-nav{
+        margin-right: 0%;
     }
 
     .auth-buttons {
@@ -250,6 +265,9 @@
         position: absolute;
         z-index: 2;
 }
+    .auth-buttons-mobile{        
+        top: 4px;
+    }
 
 }
 
@@ -283,6 +301,9 @@
     .img-overlay h2 span{
         font-size: 20px;
     }
+    .auth-buttons-mobile{        
+        top: 2px;
+    }
 }
 
 
@@ -299,8 +320,11 @@
     .agency-left-side h2{
     font-size: 30px;
     letter-spacing: 5px;
+    margin-left: 0%;
 }
-
+    .heading-normal-text{
+    margin-left: 0%;
+    }
 .agency-left-side span{
     font-size:40px;
 }
@@ -312,6 +336,7 @@
 }
 
 }
+
 
 @media screen and (max-width:320px) {
     .about{
@@ -404,7 +429,7 @@
     }
     .headings{
         font-size: 30px;
-        color: red;
+        /* color: red; */
     }
     .container h2 span{
         font-size: 30px;
@@ -496,12 +521,17 @@
 }
 
 
-/* *************top-destination **************** */
+/* *************About top destination **************** */
 
 @media screen and (max-width:1024px) {
     .headings {
         font-size: 40px;
+        margin-left: 0px;
     }   
+    
+    .heading-normal-text{
+        margin-left: 0px;
+    }
     .container h2 span {
         font-size: 40px;
     }
@@ -570,7 +600,7 @@
         /* color: brown; */
     }   
     .container h2 span {
-        font-size: 25px;
+        font-size: 30px;
     }
 }
 
@@ -583,7 +613,7 @@
         padding-bottom: 30px;
     }   
     .container h2 span {
-        font-size: 20px;
+        font-size: 25px;
     }
     .swiper-wrapper .swiper-slide img{
         width: 100%;
